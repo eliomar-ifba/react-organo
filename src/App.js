@@ -36,11 +36,20 @@ function App() {
         aoSalvarOperador={(operador) => aoNovoOperadorSalvo(operador)}
         times={times.map((time) => time.nome)}
       />
+
+      <section className="titulo">
+        <div>
+          <h1>Minha Organização</h1>
+          <img src="/assets/imagens/botao-add.png" alt="Logo organo" />
+        </div>
+      </section>
+
+      {/* Componente <Time/>  */}
       {times
         // .filter((time) =>
         //   colaboradores.some((colaborador) => colaborador.time === time.nome)
         // )
-         .map((time, index) => (
+        .map((time, index) => (
           <Time
             key={index}
             nome={time.nome}
@@ -51,7 +60,7 @@ function App() {
             )}
           />
         ))}
-      
+
       <Rodape />
     </div>
   );
